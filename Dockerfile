@@ -12,7 +12,7 @@ RUN chown -R "1001" "${FIX_DIR}" && \
 
 USER 1001
 
-COPY hello-world /usr/src/app
+COPY *-build /usr/src/app
 EXPOSE 8080
 
-CMD ["./hello-world"]
+CMD ["./*-build"]
